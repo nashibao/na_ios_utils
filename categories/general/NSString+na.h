@@ -10,4 +10,6 @@
 
 @interface NSString (na)
 
+- (NSString *)encodeURIComponentByEncoding:(NSStringEncoding)encoding;
+
 @end

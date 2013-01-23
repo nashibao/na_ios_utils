@@ -10,3 +10,4 @@
 #import "NSDate+na.h"
 #import "NSNotificationCenter+na.h"
 #import "NSNull+na.h"
+#import "NSString+na.h"

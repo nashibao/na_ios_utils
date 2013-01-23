@@ -10,4 +10,12 @@
 
 @implementation NSString (na)
 
+- (NSString *)encodeURIComponentByEncoding:(NSStringEncoding)encoding{
+    return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                                 (__bridge CFStringRef)self,
+                                                                                 NULL,
+                                                                                 (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ",
+                                                                                 CFStringConvertNSStringEncodingToEncoding(encoding));
+}
+
 @end
