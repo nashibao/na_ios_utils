@@ -12,4 +12,6 @@
 
 - (id)initWithNibName;
 
+- (void)presentStoryBoardWithName:(NSString *)storyBoardName animated:(BOOL)animated completion:(void(^)(void))completion;
+
 @end

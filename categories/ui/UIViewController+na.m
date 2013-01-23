@@ -14,4 +14,8 @@
     return [self initWithNibName:NSStringFromClass([self class]) bundle:[NSBundle mainBundle]];
 }
 
+- (void)presentStoryBoardWithName:(NSString *)storyBoardName animated:(BOOL)animated completion:(void(^)(void))completion{
+    [self presentViewController:[[UIStoryboard storyboardWithName:storyBoardName bundle:[NSBundle mainBundle]] instantiateInitialViewController] animated:animated completion:completion];
+}
+
 @end
